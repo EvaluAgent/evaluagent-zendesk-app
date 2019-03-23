@@ -1,0 +1,31 @@
+{
+  "name": "EvaluAgent",
+  "author": {
+    "name": "EvaluAgent",
+    "email": "support@evaluagent.com",
+    "url": "https://www.evaluagent.com"
+  },
+  "defaultLocale": "en",
+  "private": false,
+  "location": {
+    "support": {
+      "ticket_sidebar": "assets/iframe.html"
+    }
+  },
+  "version": "1.0",
+  "frameworkVersion": "2.0",
+  "domainWhitelist": ["app.development.evaluagent.co", "app.staging-v3.evaluagent.co", "app.uat.evaluagent.co", "app.evaluagent.com", "evaluagent.fwd.wf"],
+  "parameters": [
+    {
+      "name": "accessKeyId",
+      "type": "text",
+      "secure": true,
+      "required": true
+    }, {
+      "name": "secretToken",
+      "type": "text",
+      "secure": true,
+      "required": true
+    }
+  ]
+}

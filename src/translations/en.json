@@ -1,0 +1,23 @@
+{
+  "app": {
+    "name": "EvaluAgent",
+    "short_description": "View the evaluations completed on your tickets from within Zendesk.",
+    "long_description": "The EvaluAgent application will allow you to view the evaluations completed on Zendesk tickets without leaving Zendesk itself.",
+    "installation_instructions": "Configure the following app settings, then click Install.",
+    "title": "EvaluAgent"
+  },
+  "evaluation": {
+    "details": "Evaluation Details",
+    "evaluator": "Evaluator",
+    "mode": "Mode",
+    "scorecard": "Scorecard",
+    "date": "Evaluation Date",
+    "qualityScore": "Quality Score",
+    "qualityScoreText": "Sum of weightings for 'pass' line items divided by sum of all weightings on the scorecard (treating line items scored NA as a pass).",
+    "evaluationOutcome": "Evaluation Outcome",
+    "evaluationOutcomeText": "The Evaluation Quality Score is higher than the scorecard's pass rate of 85% and no auto-FAIL line items have been identified during evaluation.",
+    "autoFails": "Auto Fails",
+    "autoFailsText": "Number of Auto-FAIL line items identified on this evaluation",
+    "viewInEvaluagent": "View full scores in EvaluAgent"
+  }
+}

@@ -1,0 +1,25 @@
+.loader {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+}
+
+.outcome-title {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.pass {
+  color: green;
+  font-weight: bold;
+}
+
+.tiny-text {
+  font-size: 11px;
+}
+
+.bold {
+  font-weight: bold;
+}
