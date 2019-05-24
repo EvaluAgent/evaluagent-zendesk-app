@@ -36,7 +36,7 @@
     "@zendeskgarden/css-tabs": "^5.0.3",
     "@zendeskgarden/css-tags": "^4.0.4",
     "@zendeskgarden/css-tooltips": "^4.0.4",
-    "@zendeskgarden/css-utilities": "^3.0.1",
+    "@zendeskgarden/css-utilities": "^4.3.3",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.0",
     "babel-loader": "^7.1.5",
