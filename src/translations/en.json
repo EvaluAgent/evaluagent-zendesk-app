@@ -2,8 +2,8 @@
   "app": {
     "name": "EvaluAgent",
     "short_description": "View the evaluations completed on your tickets from within Zendesk.",
-    "long_description": "The EvaluAgent application will allow you to view the evaluations completed on Zendesk tickets without leaving Zendesk itself.",
-    "installation_instructions": "Configure the following app settings, then click Install.",
+    "long_description": "Helping improve service quality as you scale, the EvaluAgent Quality Assurance and Coaching platform is packed with features: Evaluate agents, conversations and tickets across every channel. Generate insight and share reports with advanced analytics. Demonstrate compliance and prove the fair treatment of customers with every evaluation and action stored securely. Drive improvement with real-time notifications. For more information, and to start your free 30-day trial, please visit - https://www.evaluagent.com/software. The EvaluAgent App for Zendesk will allow you to view the evaluations completed on Zendesk tickets without leaving the Zendesk application.",
+    "installation_instructions": "You will need an API Key and Secret to allow Zendesk to communicate with EvaluAgent. To generate the API Keys needed, from within EvaluAgent go to Admin > Integrations > API Keys and press GENERATE NEW. You should then enter these keys in to the appropriate box in Zendesk and then press INSTALL. That's it. EvaluAgent will then appear within your Zendesk installation.",
     "title": "EvaluAgent"
   },
   "evaluation": {
