@@ -25,7 +25,6 @@ class App {
     const EvaluationDataRequest = {
       url: 'https://app.evaluagent.com/api/customer/zendesk/ticket/' + ticketId,
       type: 'GET',
-      secure: true,
       headers: {
         "secretToken": settings.secretToken,
         "accessKeyId": settings.accessKeyId
