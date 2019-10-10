@@ -4,14 +4,12 @@ export default function (args) {
   if (args.evaluation.found !== 1) {
     return `<div class="evaluagent-app">
       <div>
-        <div class="card">
-          ${args.evaluation.message}
-        </div>
+        ${args.evaluation.message}
       </div>
     </div>`
   }
 
-  return `<div class="evaluagent-app">
+  let responseBody = `<div class="evaluagent-app">
     <div>
         <div class="card">
           <div class="card-header">
@@ -48,30 +46,37 @@ export default function (args) {
             <p class="tiny-text">${I18n.t('evaluation.qualityScoreText')}</p>
           </div>
         </div>
-        <br/>
-        <div class="card">
-          <div class="card-header">
-            ${I18n.t('evaluation.evaluationOutcome')}
-          </div>
-          <div class="card-body">
-            <h1 class="outcome-title ${args.evaluation.evaluationData.outcome}">${args.evaluation.evaluationData.outcome}</h1>
-            <p class="tiny-text">${I18n.t('evaluation.evaluationOutcomeText')}</p>
-          </div>
-        </div>
-        <br/>
-        <div class="card">
-          <div class="card-header">
-            ${I18n.t('evaluation.autoFails')}
-          </div>
-          <div class="card-body">
-            <h1 class="outcome-title">${args.evaluation.evaluationData['auto-fails']}</h1>
-            <p class="tiny-text">${I18n.t('evaluation.autoFailsText')}</p>
-          </div>
-        </div>
-        <br/>
-        <a href="https://app.evaluagent.com/quality/evaluations/${args.evaluation.evaluationData['link-to-evaluagent']}/results" class="btn btn-primary btn-sm" target="_NEW">
-          ${I18n.t('evaluation.viewInEvaluagent')}
-        </a>
+        <br/>`
+
+  if (args.evaluation.evaluationData.outcome) {
+    responseBody += `<div class="card">
+      <div class="card-header">
+        ${I18n.t('evaluation.evaluationOutcome')}
+      </div>
+      <div class="card-body">
+        <h1 class="outcome-title ${args.evaluation.evaluationData.outcome}">${args.evaluation.evaluationData.outcome}</h1>
+        <p class="tiny-text">${I18n.t('evaluation.evaluationOutcomeText')}</p>
+      </div>
     </div>
-  </div>`
+    <br/>`
+  }
+
+  if (args.evaluation.evaluationData['auto-fails']) {
+    responseBody += `<div class="card">
+      <div class="card-header">
+        ${I18n.t('evaluation.autoFails')}
+      </div>
+      <div class="card-body">
+        <h1 class="outcome-title">${args.evaluation.evaluationData['auto-fails']}</h1>
+        <p class="tiny-text">${I18n.t('evaluation.autoFailsText')}</p>
+      </div>
+    </div>
+    <br/>`
+  }
+
+  responseBody += `<a href="https://app.evaluagent.com/quality/evaluations/${args.evaluation.evaluationData['link-to-evaluagent']}/results" class="btn btn-primary btn-sm" target="_NEW">
+    ${I18n.t('evaluation.viewInEvaluagent')}
+  </a></div></div>`
+
+  return responseBody;
 }

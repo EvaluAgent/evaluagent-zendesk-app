@@ -16,6 +16,11 @@
   font-weight: bold;
 }
 
+.Unfair {
+  color: red;
+  font-weight: bold;
+}
+
 .tiny-text {
   font-size: 11px;
 }
