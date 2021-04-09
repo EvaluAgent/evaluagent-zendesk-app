@@ -16,7 +16,7 @@
       },
       "region": {
         "label": "Region",
-        "helpText": "Please enter your region. Should be one of EU, AUS or NA"
+        "helpText": "Please enter your region. Should be one of eu, aus or na (In lowercase). Please contact EvaluAgent for guidance if your unsure which region to enter."
       }
     }
   },
