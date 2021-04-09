@@ -1,6 +1,7 @@
 import I18n from '../javascripts/lib/i18n.js'
 
-export default function (args) {
+export default function (args, settings) {
+
   if (args.evaluation.found !== 1) {
     return `<div class="evaluagent-app">
       <div>
@@ -74,7 +75,15 @@ export default function (args) {
     <br/>`
   }
 
-  responseBody += `<a href="https://app.evaluagent.com/quality/evaluations/${args.evaluation.evaluationData['link-to-evaluagent']}/results" class="btn btn-primary btn-sm" target="_NEW">
+  let returnToEvaluAgentUrl = "https://app.evaluagent.com/quality/evaluations/" + args.evaluation.evaluationData['link-to-evaluagent'] + "/results";
+
+  if (settings.region === 'na') {
+    returnToEvaluAgentUrl = "https://app.us-east.evaluagent.com/quality/evaluations/" + args.evaluation.evaluationData['link-to-evaluagent'] + "/results";
+  } else if (settings.region === 'aus') {
+    returnToEvaluAgentUrl = "https://app.aus.evaluagent.com/quality/evaluations/" + args.evaluation.evaluationData['link-to-evaluagent'] + "/results";
+  }
+
+  responseBody += `<a href="${returnToEvaluAgentUrl}" class="btn btn-primary btn-sm" target="_NEW">
     ${I18n.t('evaluation.viewInEvaluagent')}
   </a></div></div>`
 

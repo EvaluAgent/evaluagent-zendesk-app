@@ -12,9 +12,17 @@
       "ticket_sidebar": "assets/iframe.html"
     }
   },
-  "version": "1.0",
+  "version": "1.1",
   "frameworkVersion": "2.0",
-  "domainWhitelist": ["app.development.evaluagent.co", "app.staging-v3.evaluagent.co", "app.uat.evaluagent.co", "app.evaluagent.com", "evaluagent.fwd.wf"],
+  "domainWhitelist": [
+    "app.development.evaluagent.co",
+    "app.staging-v3.evaluagent.co",
+    "app.uat.evaluagent.co",
+    "app.evaluagent.com",
+    "app.aus.evaluagent.com",
+    "app.us-east.evaluagent.com",
+    "evaluagent.fwd.wf"
+  ],
   "parameters": [
     {
       "name": "accessKeyId",
@@ -22,6 +30,10 @@
       "required": true
     }, {
       "name": "secretToken",
+      "type": "text",
+      "required": true
+    }, {
+      "name": "region",
       "type": "text",
       "required": true
     }

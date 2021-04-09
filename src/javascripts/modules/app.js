@@ -22,8 +22,16 @@ class App {
     const ticketId = this.states.ticketData.ticket.id
     const settings = this._appData.metadata.settings;
 
+    let eaUrl = 'https://app.evaluagent.com/api/customer/zendesk/ticket/';
+
+    if (settings.region === 'na') {
+      eaUrl = 'https://app.us-east.evaluagent.com/api/customer/zendesk/ticket/';
+    } else if (settings.region === 'aus') {
+      eaUrl = 'https://app.aus.evaluagent.com/api/customer/zendesk/ticket/';
+    }
+
     const EvaluationDataRequest = {
-      url: 'https://app.evaluagent.com/api/customer/zendesk/ticket/' + ticketId,
+      url: eaUrl + ticketId,
       type: 'GET',
       headers: {
         "secretToken": settings.secretToken,
@@ -37,7 +45,7 @@ class App {
     this.states.evaluation = EvaluationDataResponse
 
     if (EvaluationDataResponse) {
-      render('.loader', getDefaultTemplate(this.states))
+      render('.loader', getDefaultTemplate(this.states, settings))
 
       return resizeContainer(this._client, MAX_HEIGHT)
     }

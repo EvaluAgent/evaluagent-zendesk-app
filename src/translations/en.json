@@ -7,12 +7,16 @@
     "title": "EvaluAgent",
     "parameters": {
       "accessKeyId": {
-        "label": "accessKeyId",
+        "label": "Access Key ID",
         "helpText": "Enter your Access Key ID from EvaluAgent"
       },
       "secretToken": {
-        "label": "secretToken",
+        "label": "Secret Token",
         "helpText": "Enter your Secret Token from EvaluAgent"
+      },
+      "region": {
+        "label": "Region",
+        "helpText": "Please enter your region. Should be one of EU, AUS or NA"
       }
     }
   },
