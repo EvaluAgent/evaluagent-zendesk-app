@@ -56,7 +56,7 @@ class App {
      * @param {Object} error error object
      */
   _handleError (error) {
-    console.log('An error is handled here: ', error.message)
+    document.write("An error has occurred: " + error.message);
   }
 }
 
