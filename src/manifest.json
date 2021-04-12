@@ -27,13 +27,11 @@
     {
       "name": "accessKeyId",
       "type": "text",
-      "required": true,
-      "secure": true
+      "required": true
     }, {
       "name": "secretToken",
       "type": "text",
-      "required": true,
-      "secure": true
+      "required": true
     }, {
       "name": "region",
       "type": "text",

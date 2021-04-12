@@ -28,6 +28,8 @@ class App {
       eaUrl = 'https://app.us-east.evaluagent.com/api/customer/zendesk/ticket/';
     } else if (settings.region === 'aus') {
       eaUrl = 'https://app.aus.evaluagent.com/api/customer/zendesk/ticket/';
+    } else if (settings.region === 'uat') {
+      eaUrl = 'https://app.uat.evaluagent.co/api/customer/zendesk/ticket/';
     }
 
     const EvaluationDataRequest = {
