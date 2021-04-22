@@ -20,18 +20,19 @@
     "app.uat.evaluagent.co",
     "app.evaluagent.com",
     "app.aus.evaluagent.com",
-    "app.us-east.evaluagent.com",
-    "evaluagent.fwd.wf"
+    "app.us-east.evaluagent.com"
   ],
   "parameters": [
     {
       "name": "accessKeyId",
       "type": "text",
-      "required": true
+      "required": true,
+      "secure": true
     }, {
       "name": "secretToken",
       "type": "text",
-      "required": true
+      "required": true,
+      "secure": true
     }, {
       "name": "region",
       "type": "text",

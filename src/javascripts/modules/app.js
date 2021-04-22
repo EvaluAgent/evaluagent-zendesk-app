@@ -35,9 +35,10 @@ class App {
     const EvaluationDataRequest = {
       url: eaUrl + ticketId,
       type: 'GET',
+      secure: true,
       headers: {
-        "secretToken": settings.secretToken,
-        "accessKeyId": settings.accessKeyId
+        "secretToken": "{{setting.secretToken}}",
+        "accessKeyId": "{{setting.accessKeyId}}",
       },
       dataType: 'json'
     }
