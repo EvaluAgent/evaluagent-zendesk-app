@@ -36,6 +36,7 @@ class App {
       url: eaUrl + ticketId,
       type: 'GET',
       secure: true,
+      contentType: 'application/json',
       headers: {
         "secretToken": "{{setting.secretToken}}",
         "accessKeyId": "{{setting.accessKeyId}}",
